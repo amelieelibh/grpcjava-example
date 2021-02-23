@@ -1,0 +1,29 @@
+spring:
+  application: 
+    name: protobuf
+    comment: >
+      "demo protobuf"
+    buildtime: "@buildtime@"
+    version: "@project.version@"
+#  profiles: 
+#    active: "@spring.profiles.active@"
+#    default: "@spring.profiles.active@"
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
+app:
+  var: "x"
+logging:
+  level:
+    .: debug
+    org:
+      springframework: DEBUG
+    ar.com.tic: DEBUG
+server:
+  servlet:
+    contextPath: /protobuf
+    session:
+      timeout: 600000
+  port: "@portDeploy@"
